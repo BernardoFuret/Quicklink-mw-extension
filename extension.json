@@ -1,0 +1,17 @@
+{
+	"name": "Quicklink",
+	"version": "1.0.0",
+	"author": [
+		"wSedlacek",
+		"Becasita"
+	],
+	"url": "https://github.com/BernardoFuret/Quicklink-mw-extension",
+	"type": "skin",
+	"AutoloadClasses": {
+		"Quicklink": "Quicklink.php"
+	},
+	"Hooks": {
+		"BeforePageDisplay": "Quicklink::onBeforePageDisplay"
+	},
+	"manifest_version": 2
+}
