@@ -12,10 +12,14 @@ class Quicklink {
 			
 			$out->addScript(
 "<script>
-if (navigator.connection && !/\slow-2g|2g|3g/.test(navigator.connection.effectiveType)) {
-	window.addEventListener('load', () =>{
-		quicklink.listen({ el: document.querySelector('#content'), throttle: 5 });
-	});
+if ( navigator.connection && !/\slow-2g|2g|3g/.test( navigator.connection.effectiveType ) ) {
+	window.addEventListener( 'load', () => {
+		quicklink.listen( {
+			el: document.querySelector( '#content' ),
+			ignores: [ ( uri ) => uri.includes( '.php' ) ],
+			throttle: 5,
+		} );
+	} );
 }
 </script>"
 			);
@@ -23,3 +27,5 @@ if (navigator.connection && !/\slow-2g|2g|3g/.test(navigator.connection.effectiv
 	}
 
 }
+
+
