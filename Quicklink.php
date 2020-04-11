@@ -13,7 +13,7 @@ class Quicklink {
 
 		$quicklinkOptThrottle = $quicklinkOptThrottle ?? 3;
 
-		if ( !$skin->getUser()->isLoggedIn() ) {
+		if ( !session_id() ) {
 			$out->addScript( "<script src=\"https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver\"></script>" );
 
 			$out->addScript( "<script src=\"https://unpkg.com/quicklink@2.0.0-alpha/dist/quicklink.umd.js\"></script>" );
