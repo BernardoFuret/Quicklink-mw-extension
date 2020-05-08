@@ -6,7 +6,7 @@
 		"Becasita"
 	],
 	"url": "https://github.com/BernardoFuret/Quicklink-mw-extension",
-	"type": "skin",
+	"type": "other",
 	"AutoloadClasses": {
 		"Quicklink": "Quicklink.php"
 	},
